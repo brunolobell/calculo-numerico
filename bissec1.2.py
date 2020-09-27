@@ -1,3 +1,4 @@
+#Metodo da Bisseccao
 import math
 
 # f(x) = -2+7x-5x^2+6x^3

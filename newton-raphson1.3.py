@@ -1,15 +1,16 @@
+#Métode de Newton-Raphson
 import math
 
 # X[k+1] = X[k] - f(X[k])/f'(X[k])
-# f(x) = (0.9-0.4x)/x
-# f'(x) = -(9/10)x^2
+# f(x) = -0.4x^2 + 2.2x + 4.7
+# f'(x) = (22-8x)/10
 
 def f(x):
-  r = (0.9 - (0.4*x)) / x 
+  r = -(0.4 * (x**2)) + (2.2 * x) + 4.7
   return r
 
 def fl(x):
-  r = -(9/10)*(x**2)
+  r = (22 - 8 * x) / 10
   return r
 
 def nr(x0,p):
@@ -25,4 +26,5 @@ def nr(x0,p):
     x = x0 - (f(x0)/fl(x0))
   return x,k
 
-print(nr(1,10**(-10)))
+print(nr(0,10**(-10)))
+print(nr(10,10**(-10)))

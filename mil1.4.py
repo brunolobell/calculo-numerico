@@ -2,11 +2,11 @@
 import math
 
 # f(x) = x - Φ(x) = 0
-# f(x) = -2+7x-5x^2+6x^3
-# Φ(x) = 1/7 * (-6x^3 + 5x^2 + 2)
+# f(x) = cosh(x)-2e^(-0.3x)
+# Φ(x) = -10/3(ln(cosh(x)) - ln(2))
 
 def fi(x):
-  r = -((6*(x**3))/7) + ((5*(x**2))/7) + (2/7)
+  r = -(10/3)*(math.log(math.cosh(x)) - math.log(2))
   return r
 
 def mil(x0,p):

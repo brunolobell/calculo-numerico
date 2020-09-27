@@ -1,7 +1,7 @@
 #Metodo da Bisseccao
 import math
 
-# f(x) = cosh(x)-2e^(-0.3x)
+# f(x) = (0.9-0.4x)/x
 
 def bissec(a,b,p):
   # X => Raiz procurada
@@ -12,12 +12,12 @@ def bissec(a,b,p):
   while abs(a - b) > p:
     k += 1
     x = (a + b) / 2
-    fa = math.cosh(a) - (2*math.exp(-0.3*a))
-    fx = math.cosh(x) - (2*math.exp(-0.3*x)) 
+    fa = (0.9 - (0.4*a)) / a
+    fx = (0.9 - (0.4*x)) / x
     if fa * fx > 0:
       a = x
     else:
       b = x
   return x,k
 
-print(bissec(0,2,10**(-4)))
+print(bissec(1,3,10**(-4)))

@@ -19,4 +19,4 @@ def bissec(a,b,p):
       b = x
   return x,k
 
-print(bissec(1,2 * math.pi,10**(-3)))
+print(bissec(0.1,2 * math.pi,10**(-3)))

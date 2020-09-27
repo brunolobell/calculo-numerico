@@ -2,15 +2,15 @@
 import math
 
 # X[k+1] = X[k] - f(X[k])/f'(X[k])
-# f(x) = cosh(x)-2e^(-0.3x)
-# f'(x) = sinh(x) + 3/5 * e^(-3x/10)
+# f(x) = (0.9-0.4x)/x
+# f'(x) = -(9/10)x^2
 
 def f(x):
-  r = math.cosh(x) - (2*math.exp(-0.3*x))
+  r = (0.9 - (0.4*x)) / x 
   return r
 
 def fl(x):
-  r = math.sinh(x) + ((3/5) * (math.exp(-0.3*x)))
+  r = -(9/10)*(x**2)
   return r
 
 def nr(x0,p):
@@ -26,4 +26,4 @@ def nr(x0,p):
     x = x0 - (f(x0)/fl(x0))
   return x,k
 
-print(nr(2,10**(-3)))
+print(nr(3,10**(-10)))
