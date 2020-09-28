@@ -2,8 +2,8 @@ import mpmath
 
 # X[k+1] = X[k] - f(X[k])/f'(X[k])
 # f(x) = 1/x[sinh(ax)-sinh(bx)]-L=0
-# f'(x) = (acosh(ax)-bcosh(bx))/x - (sinh(ax)-sinh(bx))/x^2
-a = -30
+# f'(x) = (acosh(ax) - bcosh(bx))/x - (sinh(ax) - sinh(bx))/x^2
+a = 30
 b = 15
 L = 120
 
@@ -16,7 +16,7 @@ def fl(x):
   p2 = b*mpmath.cosh(b*x)
   p3 = mpmath.sinh(a*x)
   p4 = mpmath.sinh(b*x)
-  r = ((p1 - p2)/x) - ((p3 - p4)/(x**2))
+  r = ((p1 - p2)/x) - ((p3 - p4)/(mpmath.power(x,2)))
   return r
 
 def nr(x0,p):
@@ -30,7 +30,6 @@ def nr(x0,p):
     k += 1
     x0 = x
     x = x0 - (f(x0)/fl(x0))
-    print(k)
   return x,k
 
 print(nr(0.1,10**(-5)))

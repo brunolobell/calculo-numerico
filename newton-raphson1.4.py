@@ -10,7 +10,7 @@ def f(x):
   return r
 
 def fl(x):
-  r = -(9/10)*(x**2)
+  r = -(9/(10*(x**2)))
   return r
 
 def nr(x0,p):
