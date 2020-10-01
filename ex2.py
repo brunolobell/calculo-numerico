@@ -3,12 +3,12 @@ import mpmath
 # X[k+1] = X[k] - f(X[k])/f'(X[k])
 # f(x) = 1/x[sinh(ax)-sinh(bx)]-L=0
 # f'(x) = (acosh(ax) - bcosh(bx))/x - (sinh(ax) - sinh(bx))/x^2
-a = 30
+a = -30
 b = 15
 L = 120
 
 def f(x):
-  r = ((1/x)*(mpmath.sinh(a*x) - mpmath.sinh(b*x))) - L
+  r = (-(1/x)*(mpmath.sinh(a*x) - mpmath.sinh(b*x))) - L
   return r
 
 def fl(x):
@@ -16,7 +16,7 @@ def fl(x):
   p2 = b*mpmath.cosh(b*x)
   p3 = mpmath.sinh(a*x)
   p4 = mpmath.sinh(b*x)
-  r = ((p1 - p2)/x) - ((p3 - p4)/(mpmath.power(x,2)))
+  r = ((p2-p1)/x) - ((p4-p3)/(x**2))
   return r
 
 def nr(x0,p):
