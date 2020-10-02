@@ -41,4 +41,4 @@ def nr(x0,p):
   return x,k
 
 print(nr(2,10**(-3)))
-print(nr(0.1,10**(-3)))
+print(nr(0.5,10**(-3)))

@@ -32,4 +32,4 @@ def nr(x0,p):
     x = x0 - (f(x0)/fl(x0))
   return x,k
 
-print(nr(0.1,10**(-5)))
+print(nr(0.2,10**(-5)))

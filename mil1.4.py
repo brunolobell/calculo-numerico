@@ -6,7 +6,7 @@ import mpmath
 # Φ(x) = -10/3(ln(cosh(x)) - ln(2))
 
 def fi(x):
-  r = -(10/3)*(mpmath.log(mpmath.cosh(x)) - mpmath.log(2))
+  r = -(10/3)*(mpmath.log(mpmath.cosh(x)/2))
   return r
 
 def mil(x0,p):

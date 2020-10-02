@@ -29,4 +29,4 @@ def bissec(a,b,p):
       b = x
   return x,k
 
-print(bissec(-800,-600,10**(-3)))
+print(bissec(100,1000,10**(-3)))

@@ -76,9 +76,9 @@ def gausssid(A,B,p):
   return x, k
   
 
-A = np.array([[-4,-1,2],[1,6,-1],[4,-3,-13]])
+A = np.array([[-8,-2,4],[10,12,-2],[20,-6,-26]])
 print(A)
-B = np.array([[7],[-6],[6]])
+B = np.array([[5],[6],[9]])
 print(B)
 print(gaussjac(A,B,10**(-3)))
 print(gausssid(A,B,10**(-3)))

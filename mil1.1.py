@@ -24,4 +24,4 @@ def mil(x0,p):
   
   return x,k
 
-print(mil(0,10**(-4)))
+print(mil(0,10**(-3)))
